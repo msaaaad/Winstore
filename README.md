@@ -1,6 +1,6 @@
 # WIN Store — Frontend Developer Assessment
 
-A e-commerce web application built with Next.js 15, TypeScript, and Tailwind CSS.
+A responsive e-commerce web application built with Next.js 15, TypeScript, and Tailwind CSS.
 
 ## Live Demo
 

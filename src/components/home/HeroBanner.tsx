@@ -40,37 +40,50 @@ export default function HeroBanner() {
 
   return (
     <div className={`relative w-full ${slide.bg} transition-colors duration-500`}>
-      <div className="max-w-7xl mx-auto px-10 flex items-center justify-between min-h-[320px] relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
 
-        {/* Text */}
-        <div className="flex-1 max-w-sm z-10">
-          <div className="text-[48px] fw-[400]">
-            Shop
-            <span className="text-accent ml-2">
-              {slide.title}
-            </span>
+        {/* Prev / Next arrows */}
+        <button
+          onClick={prev}
+          className="absolute left-1 top-1/2 -translate-y-1/2 bg-white shadow w-8 h-8 rounded-full flex items-center justify-center z-10 text-lg hover:bg-gray-100"
+        >‹</button>
+        <button
+          onClick={next}
+          className="absolute right-1 top-1/2 -translate-y-1/2 bg-white shadow w-8 h-8 rounded-full flex items-center justify-center z-10 text-lg hover:bg-gray-100"
+        >›</button>
+
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between min-h-[220px] md:min-h-[320px] py-6 gap-4">
+
+          {/* Text */}
+          <div className="flex-1 max-w-sm z-10 text-center md:text-left">
+            <div className="text-2xl md:text-[48px] font-[400] leading-tight">
+              Shop
+              <span className="text-accent ml-2">
+                {slide.title}
+              </span>
+            </div>
+            <p className="text-xs md:text-[13px] whitespace-pre-line leading-relaxed my-3 text-gray-500">
+              {slide.subtitle}
+            </p>
+            <button className="bg-sky text-white text-sm px-6 py-2 rounded">
+              View More
+            </button>
           </div>
-          <p className="text-[13px] whitespace-pre-line leading-relaxed mb-2">
-            {slide.subtitle}
-          </p>
-          <button className="bg-sky text-white text-sm px-6 py-2 rounded">
-            View More
-          </button>
-        </div>
 
-        {/* Image */}
-        <div className="flex-1 flex justify-center items-center relative py-6">
-          <Image
-            src={slide.image}
-            alt={slide.title}
-            width={320}
-            height={300}
-            className="object-contain max-h-[280px] w-auto"
-            priority
-          />
-          {/* Badge */}
-          <div className="absolute top-4 right-16 hero-badge rounded-full w-[165px] h-[160px] flex items-center justify-center text-[47px] font-[400] text-center leading-tight">
-            {slide.badge}
+          {/* Image + Badge */}
+          <div className="flex-1 flex justify-center items-center relative py-4">
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              width={320}
+              height={300}
+              className="object-contain max-h-[180px] md:max-h-[280px] w-auto"
+              priority
+            />
+            {/* Badge */}
+            <div className="absolute top-2 right-4 md:right-16 hero-badge rounded-full w-[80px] h-[80px] md:w-[165px] md:h-[160px] flex items-center justify-center text-xl md:text-[47px] font-[400] text-center leading-tight">
+              {slide.badge}
+            </div>
           </div>
         </div>
       </div>

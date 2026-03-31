@@ -17,7 +17,9 @@ interface Props {
   categories: Category[]
 }
 
-const VISIBLE = 4
+const isMobile = typeof window !== "undefined" && window.innerWidth < 768
+
+const VISIBLE = isMobile ? 1 : 4
 
 export default function CategorySlider({ categories }: Props) {
   const [start, setStart] = useState(0)
@@ -39,7 +41,7 @@ export default function CategorySlider({ categories }: Props) {
         <ChevronLeft size={40} />
       </button>
 
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {visible.map((cat) => (
           <Link
             key={cat.id}

@@ -15,22 +15,24 @@ export default function BestDeals({ categories, productsByCategory }: Props) {
   const products = productsByCategory[activeCategory] || []
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-6">
+    <section className="max-w-7xl mx-auto px-4 md:px-6 py-6">
+
       {/* Heading + Tabs */}
-      <div className="flex items-center justify-between gap-6 mb-4 flex-wrap">
-        <h2 className="text-[28px] font-[400] text-gray-800 pb-2">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+        <h2 className="text-[22px] md:text-[28px] font-[400] text-gray-800">
           <span className="text-teal-500">Best</span> Deals
         </h2>
 
-        <div className="flex gap-4">
+        {/* Tabs — scrollable on mobile */}
+        <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.name)}
-              className={`text-[19px] pb-2 uppercase tracking-wide font-medium transition-colors border-b-2 -mb-px
+              className={`text-sm md:text-[19px] pb-1.5 uppercase tracking-wide font-medium transition-colors border-b-2 whitespace-nowrap shrink-0
                 ${activeCategory === cat.name
                   ? "border-accent text-accent"
-                  : "border-transparent text-dark hover:text-gray-800"
+                  : "border-transparent text-gray-600 hover:text-gray-800"
                 }`}
             >
               {cat.name}
