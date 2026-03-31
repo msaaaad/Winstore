@@ -6,7 +6,7 @@ import Image from "next/image"
 const slides = [
   {
     id: 1,
-    title: "Shop Computer & experience",
+    title: "Computer & experience",
     subtitle: "You Cannot Inspect Quality Into The Product; It Is Already There.\nI Am Not A Product Of My Circumstances, I Am A Product Of My Decisions.",
     badge: "40% Off",
     bg: "bg-yellow-50",
@@ -42,23 +42,18 @@ export default function HeroBanner() {
     <div className={`relative w-full ${slide.bg} transition-colors duration-500`}>
       <div className="max-w-7xl mx-auto px-10 flex items-center justify-between min-h-[320px] relative">
 
-        {/* Left arrow */}
-        <button
-          onClick={prev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow-md w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 z-10 text-lg"
-        >
-          ‹
-        </button>
-
         {/* Text */}
         <div className="flex-1 max-w-sm z-10">
-          <h1 className="text-3xl font-bold text-gray-800 leading-tight mb-3">
-            {slide.title}
-          </h1>
-          <p className="text-xs text-gray-500 whitespace-pre-line mb-5 leading-relaxed">
+          <div className="text-[48px] fw-[400]">
+            Shop
+            <span className="text-accent ml-2">
+              {slide.title}
+            </span>
+          </div>
+          <p className="text-[13px] whitespace-pre-line leading-relaxed mb-2">
             {slide.subtitle}
           </p>
-          <button className="bg-teal-600 hover:bg-teal-700 text-white text-sm px-6 py-2 rounded">
+          <button className="bg-sky text-white text-sm px-6 py-2 rounded">
             View More
           </button>
         </div>
@@ -74,18 +69,10 @@ export default function HeroBanner() {
             priority
           />
           {/* Badge */}
-          <div className="absolute top-4 right-16 bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-sm font-bold text-center leading-tight">
+          <div className="absolute top-4 right-16 hero-badge rounded-full w-[165px] h-[160px] flex items-center justify-center text-[47px] font-[400] text-center leading-tight">
             {slide.badge}
           </div>
         </div>
-
-        {/* Right arrow */}
-        <button
-          onClick={next}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow-md w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 z-10 text-lg"
-        >
-          ›
-        </button>
       </div>
 
       {/* Dots */}
@@ -94,8 +81,8 @@ export default function HeroBanner() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              i === current ? "bg-teal-600 w-6" : "bg-gray-300 w-2"
+            className={`h-2 rounded-full transition-all duration-300 w-6 ${
+              i === current ? "bg-teal-600" : "bg-gray-300"
             }`}
           />
         ))}

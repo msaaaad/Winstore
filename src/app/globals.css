@@ -22,12 +22,38 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 .btn-custom-primary {
   background: #15ADB7;
   color: #fff;
 }
 .text-accent {
-  color: #15ADB7;
+  color: #00CAD7;
+}
+.text-sky {
+  color: #14B1F0;
+}
+.bg-sky {
+  background-color: #14B1F0;
+}
+.hero-badge {
+  background-image: linear-gradient(to right, #FDC830, #F37335);
+  color: #fff;
+}
+.nav-sub-bar {
+  background: #0E3B3E;
+  color: #fff;
+}
+.nav-main-bg {
+  background: #03484D;
+}
+.text-custom-secondary {
+  color: #034E53;
+}
+.text-custom-primary {
+  color: #000000;
+}
+.border-accent {
+  border-color: #00CAD7;
 }

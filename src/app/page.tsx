@@ -10,12 +10,10 @@ export default async function HomePage() {
     getProducts(),
   ])
 
-  // Fetch products for each category in parallel
   const categoryProducts = await Promise.all(
     categories.map((cat) => getProductsByCategory(cat.name))
   )
 
-  // Build a Record<categoryName, Product[]> for BestDeals
   const productsByCategory: Record<string, typeof products> = {}
   categories.forEach((cat, i) => {
     productsByCategory[cat.name] = categoryProducts[i]

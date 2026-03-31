@@ -12,7 +12,7 @@ export default function NewArrivals({ products }: Props) {
     <section className="max-w-7xl mx-auto px-6 py-6">
       {/* Heading */}
       <div className="flex items-center gap-2 mb-4">
-        <h2 className="text-xl font-bold text-gray-800">
+        <h2 className="text-[28px] font-[400] text-gray-800 pb-2">
           <span className="text-teal-500">New</span> Arrivals
         </h2>
       </div>

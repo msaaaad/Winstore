@@ -12,10 +12,10 @@ export default function ProductCard({ product }: Props) {
       <div className="border border-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow bg-white flex flex-col gap-2">
         
         {/* Seller */}
-        <p className="text-xs text-gray-400">Bin Bakar Electronics</p>
+        <p className="text-[12px] text-custom-primary">Bin Bakar Electronics</p>
 
         {/* Title */}
-        <p className="text-xs text-gray-700 font-medium line-clamp-2 min-h-[32px]">
+        <p className="text-custom-secondary text-[15px] line-clamp-2 min-h-[18px]">
           {product.title}
         </p>
 

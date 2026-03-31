@@ -9,21 +9,18 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="text-2xl font-bold mb-3 flex items-baseline gap-0.5">
-            <span className="text-white font-extrabold">
-              <span className="text-3xl">WIN</span>
-            </span>
-            <span className="text-gray-300 text-sm font-normal">store</span>
+            <Image src="/logo/logo.png" alt="Logo" width={132} height={48} />
           </div>
 
-          <p className="text-teal-400 text-sm font-semibold mb-3">
+          <p className="text-[18px] font-[400] text-accent mb-2">
             Got questions? Call us 24/7!
           </p>
 
-          <p className="text-gray-300 text-sm">03 111 666 144</p>
-          <p className="text-gray-300 text-sm mb-4">0317 5772015</p>
+          <p className="text-gray-300 text-[13px]">03 111 666 144</p>
+          <p className="text-gray-300 text-[13px] mb-4">0317 5772015</p>
 
-          <p className="text-teal-400 text-sm font-semibold">Contact Info</p>
-          <p className="text-gray-300 text-sm mb-4">info@winstore.pk</p>
+          <p className="text-[18px] font-[400] text-accent">Contact Info</p>
+          <p className="text-gray-300 text-[13px] mb-4">info@winstore.pk</p>
 
           {/* Social icons */}
           <div className="flex gap-3">
@@ -44,8 +41,8 @@ export default function Footer() {
 
         {/* Trending */}
         <div>
-          <h4 className="text-teal-400 font-semibold mb-4">Trending</h4>
-          <ul className="space-y-2.5 text-sm text-gray-300">
+          <h4 className="text-[18px] font-[400] text-accent mb-2">Trending</h4>
+          <ul className="space-y-2.5 text-[13px] text-gray-300">
             {["Installments", "Electronics", "Grocery", "Health & Beauty", "Home Appliances", "Mobile Accessories"].map(item => (
               <li key={item}>
                 <Link href="#" className="hover:text-white transition-colors">{item}</Link>
@@ -56,8 +53,8 @@ export default function Footer() {
 
         {/* Information */}
         <div>
-          <h4 className="text-teal-400 font-semibold mb-4">Information</h4>
-          <ul className="space-y-2.5 text-sm text-gray-300">
+          <h4 className="text-[18px] font-[400] text-accent mb-2">Information</h4>
+          <ul className="space-y-2.5 text-[13px] text-gray-300">
             {["About Us", "Contact Us", "FAQs", "Shipping & Return", "Privacy policy", "Terms & Conditions"].map(item => (
               <li key={item}>
                 <Link href="#" className="hover:text-white transition-colors">{item}</Link>
@@ -68,8 +65,8 @@ export default function Footer() {
 
         {/* Customer Care */}
         <div>
-          <h4 className="text-teal-400 font-semibold mb-4">Customer Care</h4>
-          <ul className="space-y-2.5 text-sm text-gray-300">
+          <h4 className="text-[18px] font-[400] text-accent mb-2">Customer Care</h4>
+          <ul className="space-y-2.5 text-[13px] text-gray-300">
             {["My Account", "Track Your Order", "Recently Viewed", "Wishlist", "Compare", "Become a Vendor"].map(item => (
               <li key={item}>
                 <Link href="#" className="hover:text-white transition-colors">{item}</Link>
@@ -91,8 +88,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="max-w-7xl text-left text-xs text-gray-400 py-4 px-6" style={{ backgroundColor: "#000" }}>
-        © 2021 Winstore. All Rights Reserved.
+      <div style={{ backgroundColor: "#000" }}>
+        <p className="text-left text-xs text-gray-400 py-4 px-6 max-w-7xl mx-auto">
+          © 2021 Winstore. All Rights Reserved.
+        </p>
       </div>
     </footer>
   )
