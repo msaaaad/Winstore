@@ -44,25 +44,31 @@ export default function CategorySlider({ categories }: Props) {
           <Link
             key={cat.id}
             href={`/category/${cat.name}`}
-            className="relative h-48 overflow-hidden group"
+            className="relative h-48 group"
           >
-            <Image
-              src={
-                categoryImages[cat.name] ||
-                "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
-              }
-              alt={cat.name}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+            <div className="absolute inset-0 overflow-hidden">
+              <Image
+                src={
+                  categoryImages[cat.name] ||
+                  "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+                }
+                alt={cat.name}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
 
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition" />
+            <div className="absolute bottom-4 -left-2 right-4">
+              <div className="bg-white/90 px-4 py-2 flex items-center justify-between shadow-md relative">
 
-            <div className="absolute bottom-4 left-[-2px] right-4 shadow-md">
-              <div className="bg-white/80 backdrop-blur-md px-4 py-2 flex items-center justify-between shadow-md">
+                <div className="absolute -top-[6px] left-0 w-0 h-0 border-b-[6px] border-b-black/30 border-l-[6px] border-l-transparent">
+                </div>
+
                 <span className="text-[19px] font-[400] capitalize">
                   {cat.name}
                 </span>
+
                 <span className="text-[16px] text-sky font-[400] hover:underline">
                   Shop
                 </span>
